@@ -1,0 +1,7 @@
+# This tree is a Linux desktop configuration. Its blobs must be LF: a CR in a
+# shell script (hypr/scripts/*.sh, ml4w/scripts/*, waybar/launch.sh) makes the
+# shell on the target fail every line of it, and the target has no editor to
+# fix that with. The repo is maintained on Windows, where a global
+# core.autocrlf can quietly put CRLF back, so state the policy in the repo
+# rather than relying on every checkout's git config.
+* text=auto eol=lf
