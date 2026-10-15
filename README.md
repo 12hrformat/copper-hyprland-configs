@@ -7,10 +7,12 @@ Copper ships XFCE. This repo is the configuration for the *second*, optional
 session: **Hyprland**. The distro bits live in `copperlinux`; the desktop's
 look-and-feel lives here, versioned on its own.
 
-> **Status: design.** Nothing here is installed or packaged yet. For now the repo
-> holds just this README and **[`hyprland.md`](hyprland.md)** — the plan: how the
-> session will work, the exact packages it needs, and how it hooks into Copper.
-> The dotfiles tree gets copied in once the packaging side is proven.
+> **Status: configuration vendored, packaging in progress.** The ML4W 2.17
+> dotfiles tree is in this repo under [`dotfiles/`](dotfiles/) at the pinned
+> commit, with the taken/excluded split recorded in
+> [`PROVENANCE.md`](PROVENANCE.md). **[`hyprland.md`](hyprland.md)** remains the
+> plan: how the session works, the exact packages it needs, and how it hooks
+> into Copper. The `hypr` build stage in `copperlinux` consumes this tree.
 
 ## The idea
 

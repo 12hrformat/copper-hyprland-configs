@@ -129,7 +129,7 @@ series unless noted.
 
 | component | why | pin |
 |---|---|---|
-| **Quickshell** | ML4W 2.12+ uses it for the status bar, sidebar, welcome/wallpaper/overview. It is not packaged in Ubuntu, so ML4W's own Ubuntu setup builds it. | commit `4df562dfb2475a9057f0f33a8db75808efad8670` |
+| **Quickshell** | ML4W 2.12+ uses it for the status bar, sidebar, welcome/wallpaper/overview. It is not packaged in Ubuntu, so ML4W's own Ubuntu setup builds it. Upstream mirror: [`quickshell-mirror/quickshell`](https://github.com/quickshell-mirror/quickshell) (the author's repo moved; `codifryed/quickshell` 404s). | commit `4df562dfb2475a9057f0f33a8db75808efad8670` |
 
 Quickshell needs Qt 6 (Base/Declarative/Wayland/Svg + the `qml6-module-*`
 runtime modules) and `libgirepository`/`libcairo` headers. ML4W's Ubuntu preflight
