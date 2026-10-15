@@ -29,8 +29,9 @@ own installer copies into a user's home:
 .config/rofi          menus
 .config/kitty         terminal
 .config/matugen       wallpaper-driven theming
-.config/btop fastfetch ohmyposh vim qt6ct gtk-3.0 gtk-4.0 fish xsettingsd
-.config/bashrc .config/zshrc .gtkrc-2.0 .Xresources .bashrc .zshrc
+.config/btop fastfetch ohmyposh vim qt6ct gtk-3.0 gtk-4.0
+.config/bashrc .config/zshrc
+.gtkrc-2.0 .Xresources .bashrc .zshrc
 ```
 
 The upstream layout is preserved (`dotfiles/` at the repo root, not flattened)
@@ -46,6 +47,10 @@ upstream checkout.
 - **Upstream's installer machinery** (`setup/`, `install.sh` handling,
   `*.dotinst`, `.github/`, `dev/`). That is Arch-oriented and does not apply to
   Copper, which stages the tree itself.
+- **Shell and app config that is not part of the Hyprland session**:
+  `.config/fish`, `.config/xsettingsd`, `.config/ml4w-dotfiles-settings`,
+  `.config/chromium-flags.conf`, `.config/edge-flags.conf`. The scope is
+  `hyprland.md` §6 — the Hyprland session's look and feel, nothing else.
 
 ## How Copper consumes this
 
