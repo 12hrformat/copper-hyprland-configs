@@ -1,8 +1,10 @@
 # Hyprland on Copper Linux
 
 How the optional Hyprland session works, what it needs, and how it plugs into
-Copper. This is a **design document** — the pieces marked *planned* do not exist
-in `copperlinux` yet.
+Copper. This is a **design document**, and the design has landed: the `hypr`
+build stage, `starthyprland`, and the wizard's Desktop question are all in
+`copperlinux` now. Where it says *planned* below, read it as the reasoning that
+was followed — the session is **built and gated, but not yet booted.**
 
 ---
 
@@ -271,7 +273,15 @@ Nothing floats to `main`; every input is a commit or a version.
 
 ---
 
-## 8. Copper-side changes (planned)
+## 8. Copper-side changes (landed)
+
+**Landed.** What follows was the plan; here is how it actually went. The stage
+and the `starthyprland` gate exist and are green. Two deviations: **Quickshell
+was not built** — its pinned commit needs Qt 6.6 and noble ships 6.4.2 — so
+**Waybar is the bar**; and `starthyprland.sh` lives in `iso/` beside
+`startxfce.sh`, not in `rootfs-overlay`. The config lands at
+`/usr/share/copper/hyprland-skel` and `starthyprland` seeds it into the user's
+home. Not yet booted.
 
 In `12hrformat/copperlinux`:
 
