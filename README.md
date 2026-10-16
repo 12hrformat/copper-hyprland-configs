@@ -7,7 +7,7 @@ Copper ships XFCE. This repo is the configuration for the *second*, optional
 session: **Hyprland**. The distro bits live in `copperlinux`; the desktop's
 look-and-feel lives here, versioned on its own.
 
-> **Status: landed.** The ML4W 2.17 dotfiles tree is in this repo under
+> **Status: in progress.** The ML4W 2.17 dotfiles tree is in this repo under
 > [`dotfiles/`](dotfiles/) at the pinned commit, with the taken/excluded split
 > recorded in [`PROVENANCE.md`](PROVENANCE.md). The `hypr` build stage in
 > [`12hrformat/copperlinux`](https://github.com/12hrformat/copperlinux) fetches
@@ -15,7 +15,14 @@ look-and-feel lives here, versioned on its own.
 > `/usr/share/copper/hyprland-skel`, and `starthyprland` seeds it into the
 > user's home. **[`hyprland.md`](hyprland.md)** is the design of the session —
 > how it works, the packages it needs, and how it hooks into Copper. The
-> session is **built and gated, not yet booted.**
+> session is built and gated; work continues to polish booting.
+
+## What to work on & where to start
+
+- **Understand the design:** Read [hyprland.md](hyprland.md) first.
+- **Explore the config:** [`dotfiles/`](dotfiles/) is the actual config seeded into user homes.
+- **Config package:** `starthyprland` asks about "your Hyprland config files" (Y/n, default y). On y it runs `ingot install hypr-configs` to refresh the shipped skel; the package is published in `12hrformat/copper-ingot-repo`. The package payload is this config tree.
+- **Contribute:** Open config-specific issues/PRs here; integration issues go to `copperlinux`.
 
 ## The idea
 
